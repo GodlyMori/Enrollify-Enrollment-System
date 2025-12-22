@@ -1,0 +1,10 @@
+# Enrollify Application Requirements
+
+# MySQL Database Connector
+mysql-connector-python==8.2.0
+
+# GUI Framework (if using tkinter, it's built-in with Python)
+# tkinter is included with Python on Windows
+
+# Additional utilities (if needed)
+python-dotenv==1.0.0  # For environment variable management

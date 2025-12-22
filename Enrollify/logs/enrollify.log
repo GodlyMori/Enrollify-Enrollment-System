@@ -1,0 +1,122 @@
+2025-12-13 11:33:23 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:33:23 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:33:23 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:37:47 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:37:47 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:37:47 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:38:07 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:38:07 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:38:07 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:44:34 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:44:34 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:44:34 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:46:20 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:46:20 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:46:20 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:50:46 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:50:46 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:50:46 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:55:33 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:55:33 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:55:33 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 11:56:39 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 11:56:39 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 11:56:39 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 16:18:02 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 16:18:02 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 16:18:02 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 16:20:39 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 16:20:39 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 16:20:39 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 16:40:38 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 16:40:38 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 16:40:38 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 16:43:15 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 16:43:15 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 16:43:15 - root - INFO - setup_logging:75 - ============================================================
+2025-12-13 17:00:16 - root - INFO - setup_logging:73 - ============================================================
+2025-12-13 17:00:16 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-13 17:00:16 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:02:35 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:02:35 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:02:35 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:02:42 - database_manager_enhanced - ERROR - __init__:56 - Failed to create database pool: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2025-12-14 16:02:42 - root - CRITICAL - main:458 - Fatal error: Cannot connect to database: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+Traceback (most recent call last):
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 354, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10061)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\database_manager_enhanced.py", line 42, in __init__
+    self._pool = pooling.MySQLConnectionPool(
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pool_name="enrollify_pool",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        autocommit=False
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\pooling.py", line 490, in __init__
+    self.add_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\pooling.py", line 613, in add_connection
+    cnx = connect(**self._cnx_config)  # type: ignore[assignment]
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 142, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\.venv\Lib\site-packages\mysql\connector\connection_cext.py", line 360, in _open_connection
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\main.py", line 445, in main
+    window = EnrollifyApp()
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\main.py", line 68, in __init__
+    self.initialize_screens()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\main.py", line 100, in initialize_screens
+    self.staff_login = StaffLoginScreen()
+                       ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\staff_login.py", line 27, in __init__
+    self.db = get_database()
+              ~~~~~~~~~~~~^^
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\database_manager_enhanced.py", line 891, in get_database
+    _db_instance = DatabaseManager()
+  File "C:\Users\Acer\PycharmProjects\PythonProject3\Enrollify\database_manager_enhanced.py", line 57, in __init__
+    raise ConnectionError(f"Cannot connect to database: {e}")
+ConnectionError: Cannot connect to database: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2025-12-14 16:03:16 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:03:16 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:03:16 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:03:52 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:03:52 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:03:52 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:04:11 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:04:11 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:04:11 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:17:11 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:17:11 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:17:11 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:21:25 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:21:25 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:21:25 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:29:01 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:29:01 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:29:01 - root - INFO - setup_logging:75 - ============================================================
+2025-12-14 16:45:21 - root - INFO - setup_logging:73 - ============================================================
+2025-12-14 16:45:21 - root - INFO - setup_logging:74 - Enrollify v1.0.0 - Logging Started
+2025-12-14 16:45:21 - root - INFO - setup_logging:75 - ============================================================
